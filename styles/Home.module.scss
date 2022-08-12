@@ -1,4 +1,6 @@
-$color-primary: #0070f3;	
+@import "mixins";
+
+$color-primary: blueviolet;	
 
 .container {
   padding: 0 2rem;
@@ -21,6 +23,9 @@ $color-primary: #0070f3;
   border-top: 1px solid #eaeaea;
   justify-content: center;
   align-items: center;
+  img{
+  margin-left:0.5rem;
+  }
 }
 
 .footer a {
@@ -73,6 +78,10 @@ $color-primary: #0070f3;
   justify-content: center;
   flex-wrap: wrap;
   max-width: 800px;
+  @include desktop() {
+      width: 100%;
+      flex-direction: column;
+  }
 }
 
 .card {
@@ -110,12 +119,7 @@ $color-primary: #0070f3;
   margin-left: 0.5rem;
 }
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
-}
+
 
 @media (prefers-color-scheme: dark) {
   .card,
